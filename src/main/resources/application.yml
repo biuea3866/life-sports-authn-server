@@ -1,0 +1,26 @@
+server:
+  port: 8000
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+spring:
+  main:
+    web-application-type: reactive
+    allow-bean-definition-overriding: true
+  application:
+    name: authn-server
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/LifeSports?zeroDateTimeBehavior=convertToNull&charset=utf8mb4
+    username: root
+    password: 10a10a
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database: mysql
+
+jwt:
+  key: 1c823csjn11msd56908x

@@ -1,5 +1,6 @@
 package biuea.lifesports.authnserver.common.config
 
+import biuea.lifesports.authnserver.common.filter.AuthenticationGatewayFilter
 import org.springframework.cloud.gateway.route.RouteLocator
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder
 import org.springframework.cloud.gateway.route.builder.filters
@@ -8,14 +9,20 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
 @Configuration
-class RoutingConfig {
+class RoutingConfig(val authenticationGatewayFilter: AuthenticationGatewayFilter) {
     @Bean
     fun gatewayRoutes(builder: RouteLocatorBuilder): RouteLocator =
         builder.routes {
             route {
-                path("/user-server/**")
-                filters { addRequestHeader("", "") }
-                uri("http://localhost:8081")
+                path("/users/**")
+                uri("lb://USER-SERVER")
+                filters {
+                    filter(authenticationGatewayFilter.apply(AuthenticationGatewayFilter.Config()))
+                }
+            }
+            route {
+                path("/points/**")
+                uri("lb://POINT-SERVER")
             }
         }
 }

@@ -1,4 +1,6 @@
-FROM openjdk:11
-ARG JAR_FILE=*.jar
-COPY ${JAR_FILE} life-sports-discovery-management
-ENTRYPOINT ["java", "-jar", "/life-sports-discovery-management"]
+FROM adoptopenjdk/openjdk11
+COPY build/libs/*.jar app.jar
+
+EXPOSE 8100
+
+ENTRYPOINT ["java", "-jar", "/app.jar"]

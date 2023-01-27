@@ -1,4 +1,4 @@
-package biuea.lifesports.authnserver.service.result
+package biuea.lifesports.authnserver.domain.auth.result
 
 class AuthnServiceResult {
     class DecodeToken(

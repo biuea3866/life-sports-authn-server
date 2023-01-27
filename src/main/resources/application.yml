@@ -24,3 +24,5 @@ spring:
 
 jwt:
   key: 1c823csjn11msd56908xzxmcni8u12389090wuasdkljm,zxnc,n,zxncsad22
+  access-time: 3600000
+  refresh-time: 1209600000

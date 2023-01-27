@@ -1,8 +1,8 @@
-package biuea.lifesports.authnserver.service.converter
+package biuea.lifesports.authnserver.domain.user.converter
 
 import biuea.lifesports.authnserver.common.exception.UnauthorizedException
-import biuea.lifesports.authnserver.service.constants.APIType
-import biuea.lifesports.authnserver.service.error.AuthnErrors
+import biuea.lifesports.authnserver.domain.user.constants.APIType
+import biuea.lifesports.authnserver.domain.auth.error.AuthnErrors
 import javax.persistence.AttributeConverter
 
 class APITypeConverter: AttributeConverter<APIType, String> {

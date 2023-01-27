@@ -1,6 +1,6 @@
-package biuea.lifesports.authnserver.infrastructure
+package biuea.lifesports.authnserver.infrastructure.openapi
 
-import biuea.lifesports.authnserver.service.entity.OpenAPIKey
+import biuea.lifesports.authnserver.domain.user.entity.OpenAPIKey
 import org.springframework.data.jpa.repository.JpaRepository
 
 interface OpenAPIKeyRepository: JpaRepository<OpenAPIKey, Long> {

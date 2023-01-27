@@ -1,6 +1,6 @@
 package biuea.lifesports.authnserver.common.exception
 
-import biuea.lifesports.authnserver.service.error.AuthnErrors
+import biuea.lifesports.authnserver.domain.auth.error.AuthnErrors
 
 class CommonError(
     val code: String?,

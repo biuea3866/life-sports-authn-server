@@ -1,7 +1,7 @@
-package biuea.lifesports.authnserver.service.dto
+package biuea.lifesports.authnserver.domain.auth.dto
 
 import biuea.lifesports.authnserver.common.exception.UnauthorizedException
-import biuea.lifesports.authnserver.service.error.AuthnErrors
+import biuea.lifesports.authnserver.domain.auth.error.AuthnErrors
 
 class TokenClaim(
     val userId: Long?,

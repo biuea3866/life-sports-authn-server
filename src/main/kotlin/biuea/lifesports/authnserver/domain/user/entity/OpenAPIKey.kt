@@ -1,4 +1,4 @@
-package biuea.lifesports.authnserver.service.entity
+package biuea.lifesports.authnserver.domain.user.entity
 
 import javax.persistence.*
 

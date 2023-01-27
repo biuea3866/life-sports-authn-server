@@ -1,3 +1,0 @@
-package biuea.lifesports.authnserver.service.command
-
-class AuthnServiceCommand

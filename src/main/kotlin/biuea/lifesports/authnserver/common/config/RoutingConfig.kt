@@ -17,6 +17,10 @@ class RoutingConfig(val authenticationGatewayFilter: AuthenticationGatewayFilter
     fun gatewayRoutes(builder: RouteLocatorBuilder): RouteLocator =
         builder.routes {
             route {
+                path("/users/*/signup")
+                uri("lb://USER-SERVER")
+            }
+            route {
                 path("/users/**")
                 uri("lb://USER-SERVER")
                 filters {

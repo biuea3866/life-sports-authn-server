@@ -1,4 +1,4 @@
-package biuea.lifesports.authnserver.service.error
+package biuea.lifesports.authnserver.domain.auth.error
 
 import biuea.lifesports.authnserver.common.exception.CommonError
 
@@ -33,6 +33,10 @@ enum class AuthnErrors(
     NOT_FOUND_OPEN_API_KEY(
         code = "AUTHN-000007",
         message = "Open API 값이 존재하지 않습니다."
+    ),
+    NOT_MATCH_PASSWORD(
+        code = "AUTHN-000008",
+        message = "비밀번호가 일치하지 않습니다."
     )
     ;
 

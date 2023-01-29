@@ -31,5 +31,9 @@ class RoutingConfig(val authenticationGatewayFilter: AuthenticationGatewayFilter
                 path("/points/**")
                 uri("lb://POINT-SERVER")
             }
+            route {
+                path("/authz/**")
+                uri("lb://AUTHZ-SERVER")
+            }
         }
 }

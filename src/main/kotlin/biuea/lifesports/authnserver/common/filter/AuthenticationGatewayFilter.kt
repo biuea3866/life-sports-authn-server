@@ -29,10 +29,6 @@ class AuthenticationGatewayFilter(val tokenProvider: TokenProvider): AbstractGat
             val token = exchange.request.headers[HttpHeaders.AUTHORIZATION]
                 ?.firstOrNull()
                 ?: throw UnauthorizedException(error = AuthnErrors.of(error = AuthnErrors.HAS_NOT_TOKEN))
-//            val apiType = APITypeConverter().convertToEntityAttribute(
-//                dbData = exchange.request.headers["X-Api-Type"]
-//                    ?.firstOrNull()
-//            )
 
             val jwtResult = this.tokenProvider.validateAccessToken(event = TokenProviderEvent.ValidateAccessToken(token = token))
 

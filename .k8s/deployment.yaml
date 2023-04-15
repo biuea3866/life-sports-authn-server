@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   name: life-sports-authn-server
   labels:
-    app: authn-server
+    app: life-sports-authn-server
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: authn-server
+      app: life-sports-authn-server
   template:
     metadata:
       labels:
-        app: authn-server
+        app: life-sports-authn-server
     spec:
       containers:
-        - name: authn-server
-          image: biuea/life-sports-authn-server
-          ports:
-            - containerPort: 8100
+      - name: life-sports-authn-server
+        image: biuea/life-sports-authn-server
+        ports:
+          - containerPort: 8100

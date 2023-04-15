@@ -6,16 +6,16 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://10.104.34.38:8761/eureka
+      defaultZone: http://life-sports-discovery-management:8761/eureka
 
 spring:
   main:
     web-application-type: reactive
     allow-bean-definition-overriding: true
   application:
-    name: authn-server
+    name: life-sports-authn-server
   datasource:
-    url: jdbc:mysql://10.96.23.42:30000/LifeSports?zeroDateTimeBehavior=convertToNull&charset=utf8mb4
+    url: jdbc:mysql://mysql:3306/LifeSports?zeroDateTimeBehavior=convertToNull&charset=utf8mb4
     username: root
     password: 10a10a
     driver-class-name: com.mysql.cj.jdbc.Driver

@@ -15,9 +15,10 @@ spring:
   application:
     name: life-sports-authn-server
   datasource:
-    url: jdbc:mysql://mysql:3306/LifeSports?zeroDateTimeBehavior=convertToNull&charset=utf8mb4
-    username: root
-    password: 10a10a
+    url: ${MYSQL_URL}
+#      jdbc:mysql://mysql:3306/LifeSports?zeroDateTimeBehavior=convertToNull&charset=utf8mb4
+    username: ${MYSQL_USERNAME}
+    password: ${MYSQL_PASSWORD}
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     database: mysql

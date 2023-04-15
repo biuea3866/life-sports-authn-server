@@ -18,4 +18,20 @@ spec:
       - name: life-sports-authn-server
         image: biuea/life-sports-authn-server
         ports:
-          - containerPort: 8100
+        - containerPort: 8100
+        env:
+        - name: MYSQL_URL
+          valueFrom:
+            configMapKeyRef:
+              name: mysql-config
+              key: mysql_url
+        - name: MYSQL_USERNAME
+          valueFrom:
+            configMapKeyRef:
+              name: mysql-config
+              key: mysql_username
+        - name: MYSQL_PASSWORD
+          valueFrom:
+            configMapKeyRef:
+              name: mysql-config
+              key: mysql_password

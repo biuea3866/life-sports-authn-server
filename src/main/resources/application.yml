@@ -15,7 +15,7 @@ spring:
   application:
     name: authn-server
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/LifeSports?zeroDateTimeBehavior=convertToNull&charset=utf8mb4
+    url: jdbc:mysql://10.96.23.42:3306/LifeSports?zeroDateTimeBehavior=convertToNull&charset=utf8mb4
     username: root
     password: 10a10a
     driver-class-name: com.mysql.cj.jdbc.Driver
